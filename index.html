@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="كيدزو - مركز ترفيهي متكامل للأطفال يقدم أنشطة تعليمية وترفيهية، قاعة احتفالات، وكوفي شوب عائلي">
+  <title>كيدزو - مركز ترفيه الأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      right: 0;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      opacity: 0;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    }
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-orange-600 text-white p-4 sticky top-0 z-50 shadow-md transition-all duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold hover:text-orange-200 transition flex items-center">
+        <i class="fas fa-child mr-2"></i> كيدزو
+      </a>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="قائمة التنقل">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 lg:space-x-10 items-center">
+        <li><a href="#activities" class="nav-link hover:text-orange-200 px-2 py-1">الألعاب والأنشطة</a></li>
+        <li><a href="#cafe" class="nav-link hover:text-orange-200 px-2 py-1">الكوفي شوب</a></li>
+        <li><a href="#events" class="nav-link hover:text-orange-200 px-2 py-1">قاعة الاحتفالات</a></li>
+        <li><a href="#reviews" class="nav-link hover:text-orange-200 px-2 py-1">آراء العملاء</a></li>
+        <li><a href="#contact" class="nav-link hover:text-orange-200 px-2 py-1">تواصل معنا</a></li>
+        <li><a href="#booking" class="bg-white text-orange-600 px-4 py-2 rounded-lg hover:bg-orange-100 transition font-medium">احجز الآن</a></li>
+      </ul>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-orange-700 mt-2 py-2" id="mobile-menu">
+      <a href="#activities" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-gamepad ml-2"></i> الألعاب والأنشطة</a>
+      <a href="#cafe" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-coffee ml-2"></i> الكوفي شوب</a>
+      <a href="#events" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-birthday-cake ml-2"></i> قاعة الاحتفالات</a>
+      <a href="#reviews" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-star ml-2"></i> آراء العملاء</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-phone ml-2"></i> تواصل معنا</a>
+      <a href="#booking" class="block px-4 py-2 bg-orange-800 hover:bg-orange-900 transition font-medium flex items-center"><i class="fas fa-calendar-check ml-2"></i> احجز الآن</a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-center text-white relative" style="background-image: url('images/hero-bg.jpg');">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="container mx-auto relative z-10 px-4 fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn" style="animation-delay: 0.2s">مرحبًا بكم في كيدزو!</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.4s">مكان المرح والإبداع لأطفالكم، حيث الألعاب التفاعلية والأنشطة الممتعة!</p>
+      <div class="animate-fadeIn" style="animation-delay: 0.6s">
+        <a href="#activities" class="bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-lg text-lg font-medium inline-block mr-4 transition transform hover:scale-105">استكشف الأنشطة</a>
+        <a href="#booking" class="bg-white text-orange-600 py-3 px-8 rounded-lg text-lg font-medium inline-block transition transform hover:scale-105">احجز الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">الألعاب والأنشطة</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">نقدم مجموعة متنوعة من الأنشطة الترفيهية والتعليمية التي تناسب جميع الأعمار</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in">
+          <div class="overflow-hidden rounded-md mb-4">
+            <img src="images/climbing.jpg" alt="جدار التسلق" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">جدار التسلق</h3>
+          <p class="text-gray-600 mb-4">تجربة تسلق آمنة وممتعة مع معدات حديثة وإشراف متخصص</p>
+          <div class="flex items-center text-orange-600">
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star-half-alt mr-2"></i>
+            <span class="text-gray-500 text-sm">(4.7)</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in" style="animation-delay: 0.2s">
+          <div class="overflow-hidden rounded-md mb-4">
+            <img src="images/trampoline.jpg" alt="الترامبولين" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">منطقة الترامبولين</h3>
+          <p class="text-gray-600 mb-4">مساحة واسعة للقفز والمرح مع إجراءات أمان مشددة</p>
+          <div class="flex items-center text-orange-600">
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-2"></i>
+            <span class="text-gray-500 text-sm">(4.9)</span>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in" style="animation-delay: 0.4s">
+          <div class="overflow-hidden rounded-md mb-4">
+            <img src="images/arts.jpg" alt="الرسم والإبداع" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">ورشة الرسم والإبداع</h3>
+          <p class="text-gray-600 mb-4">أنشطة فنية لتنمية المواهب تحت إشراف فنانين متخصصين</p>
+          <div class="flex items-center text-orange-600">
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-1"></i>
+            <i class="fas fa-star mr-2"></i>
+            <span class="text-gray-500 text-sm">(4.8)</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center fade-in" style="animation-delay: 0.6s">
+        <a href="#booking" class="bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-lg text-lg font-medium inline-block transition transform hover:scale-105">احجز نشاطك المفضل</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cafe Section -->
+  <section id="cafe" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">كوفي شوب كيدزو</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">استمتع بأجواء عائلية مع قائمة طعام متنوعة تناسب جميع الأذواق</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <div class="fade-in">
+          <img src="images/cafe-area.jpg" alt="منطقة الكوفي شوب" class="w-full rounded-lg shadow-lg">
+        </div>
+        <div class="fade-in" style="animation-delay: 0.2s">
+          <h3 class="text-2xl font-semibold mb-4">تجربة فريدة للعائلة</h3>
+          <p class="text-gray-600 mb-4">كوفي شوب كيدزو يوفر بيئة مريحة للأهالي أثناء استمتاع أطفالهم بالأنشطة، مع قائمة طعام صحية ولذيذة.</p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> قهوة عالية الجودة من أفضل المحاصيل</li>
+            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> عصائر طازجة وفواكه موسمية</li>
+            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> وجبات خفيفة صحية للأطفال</li>
+            <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> أطباق حلوة منزلية الصنع</li>
+          </ul>
+          <a href="#contact" class="text-orange-600 font-medium hover:text-orange-700 transition">اطلب القائمة الكاملة <i class="fas fa-arrow-left ml-1"></i></a>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+          <div class="text-orange-600 text-4xl mb-4"><i class="fas fa-mug-hot"></i></div>
+          <h4 class="font-semibold mb-2">مشروبات ساخنة</h4>
+          <p class="text-gray-600 text-sm">تشكيلة مميزة من القهوة والشاي</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="animation-delay: 0.2s">
+          <div class="text-orange-600 text-4xl mb-4"><i class="fas fa-glass-whiskey"></i></div>
+          <h4 class="font-semibold mb-2">عصائر طازجة</h4>
+          <p class="text-gray-600 text-sm">عصائر فواكه طبيعية 100%</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="animation-delay: 0.4s">
+          <div class="text-orange-600 text-4xl mb-4"><i class="fas fa-hamburger"></i></div>
+          <h4 class="font-semibold mb-2">وجبات خفيفة</h4>
+          <p class="text-gray-600 text-sm">ساندويشات وحلويات منزلية</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in" style="animation-delay: 0.6s">
+          <div class="text-orange-600 text-4xl mb-4"><i class="fas fa-birthday-cake"></i></div>
+          <h4 class="font-semibold mb-2">حلويات خاصة</h4>
+          <p class="text-gray-600 text-sm">تصاميم مميزة للحفلات والمناسبات</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">قاعة احتفالات كيدزو</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">احتفل بمناسباتك الخاصة في أجواء ممتعة وآمنة لأطفالك</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+        <div class="fade-in">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="images/event1.jpg" alt="حفلة عيد ميلاد" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event2.jpg" alt="ديكور الحفلات" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event3.jpg" alt="أنشطة الحفلات" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event4.jpg" alt="ضيوف الحفلة" class="rounded-lg shadow-md w-full h-48 object-cover">
+          </div>
+        </div>
+        
+        <div class="fade-in" style="animation-delay: 0.2s">
+          <h3 class="text-2xl font-semibold mb-4">باقات احتفالات متنوعة</h3>
+          <p class="text-gray-600 mb-6">نقدم باقات متكاملة لأعياد الميلاد والمناسبات الخاصة تشمل:</p>
+          
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start">
+              <div class="bg-orange-100 text-orange-600 p-2 rounded-full mr-3 mt-1">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">ديكورات مخصصة حسب طلبك</h4>
+                <p class="text-gray-500 text-sm">اختر من بين تصاميمنا أو قدم تصميمك الخاص</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-orange-100 text-orange-600 p-2 rounded-full mr-3 mt-1">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">برنامج ترفيهي متكامل</h4>
+                <p class="text-gray-500 text-sm">ألعاب، مسابقات، وأركان إبداعية</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-orange-100 text-orange-600 p-2 rounded-full mr-3 mt-1">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">كوفي شوب وخدمة الضيافة</h4>
+                <p class="text-gray-500 text-sm">تشكيلة من المشروبات والوجبات الخفيفة</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-orange-100 text-orange-600 p-2 rounded-full mr-3 mt-1">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-medium">هدايا وتذكارات للضيوف</h4>
+                <p class="text-gray-500 text-sm">تذكارات مميزة لجميع الأطفال المشاركين</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="#booking" class="bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-lg text-lg font-medium inline-block transition transform hover:scale-105">احجز قاعتك الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">آراء عملائنا</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">ما يقوله أولياء الأمور عن تجربتهم في كيدزو</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+          <div class="flex items-center mb-4">
+            <img src="images/client1.jpg" alt="أم أحمد" class="w-12 h-12 rounded-full object-cover mr-3">
+            <div>
+              <h4 class="font-semibold">أم أحمد</h4>
+              <div class="flex text-orange-600 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">"أطفالنا استمتعوا كثيرًا بالأنشطة المتنوعة، والأهم أن الأمان كان في أعلى مستوياته. الكوفي شوب مريح جدًا للأهالي."</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.2s">
+          <div class="flex items-center mb-4">
+            <img src="images/client2.jpg" alt="وليد" class="w-12 h-12 rounded-full object-cover mr-3">
+            <div>
+              <h4 class="font-semibold">وليد</h4>
+              <div class="flex text-orange-600 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">"نظمنا حفل عيد ميلاد ابنتي في كيدزو وكانت تجربة رائعة! الديكور جميل والبرنامج الترفيهي ممتع للأطفال."</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.4s">
+          <div class="flex items-center mb-4">
+            <img src="images/client3.jpg" alt="سارة" class="w-12 h-12 rounded-full object-cover mr-3">
+            <div>
+              <h4 class="font-semibold">سارة</h4>
+              <div class="flex text-orange-600 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">"ابني يحب ورشة الرسم كثيرًا، والمشرفين متعاونين ومحترفين. أصبح كيدزو وجهتنا الأسبوعية المفضلة."</p>
+        </div>
+      </div>
+      
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md fade-in" style="animation-delay: 0.6s">
+        <h3 class="text-xl font-semibold mb-4 text-center">شاركنا رأيك</h3>
+        <form id="review-form" class="space-y-4">
+          <div>
+            <label for="review-name" class="block text-gray-700 mb-1">اسمك</label>
+            <input type="text" id="review-name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+          </div>
+          <div>
+            <label for="review-rating" class="block text-gray-700 mb-1">التقييم</label>
+            <div class="flex space-x-1" id="review-rating">
+              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="1"></i>
+              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="2"></i>
+              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="3"></i>
+              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="4"></i>
+              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="5"></i>
+            </div>
+          </div>
+          <div>
+            <label for="review-message" class="block text-gray-700 mb-1">رأيك</label>
+            <textarea id="review-message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition">إرسال الرأي</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="py-16 bg-orange-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">احجز زيارتك</h2>
+        <p class="text-lg max-w-2xl mx-auto">احجز الآن لتضمن مكانك في كيدزو واستمتع بتجربة لا تنسى</p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden fade-in">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="bg-orange-100 p-8 flex flex-col justify-center">
+            <h3 class="text-2xl font-semibold mb-4 text-orange-800">معلومات الحجز</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="bg-orange-200 text-orange-800 p-2 rounded-full mr-3">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">أوقات العمل</h4>
+                  <p class="text-sm">يوميًا من 9 صباحًا إلى 11 مساءً</p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="bg-orange-200 text-orange-800 p-2 rounded-full mr-3">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">السعة</h4>
+                  <p class="text-sm">يجب الحجز المسبق للمجموعات أكثر من 10 أفراد</p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="bg-orange-200 text-orange-800 p-2 rounded-full mr-3">
+                  <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">ملاحظات</h4>
+                  <p class="text-sm">يرجى الحضور قبل 15 دقيقة من الموعد</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="p-8">
+            <form id="booking-form" class="space-y-4">
+              <div>
+                <label for="booking-name" class="block text-gray-700 mb-1">الاسم الكامل</label>
+                <input type="text" id="booking-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              </div>
+              
+              <div>
+                <label for="booking-phone" class="block text-gray-700 mb-1">رقم الهاتف</label>
+                <input type="tel" id="booking-phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              </div>
+              
+              <div>
+                <label for="booking-date" class="block text-gray-700 mb-1">تاريخ الحجز</label>
+                <input type="date" id="booking-date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              </div>
+              
+              <div>
+                <label for="booking-time" class="block text-gray-700 mb-1">وقت الحجز</label>
+                <select id="booking-time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                  <option value="">اختر الوقت</option>
+                  <option value="9:00">9:00 صباحًا</option>
+                  <option value="11:00">11:00 صباحًا</option>
+                  <option value="1:00">1:00 ظهرًا</option>
+                  <option value="3:00">3:00 عصرًا</option>
+                  <option value="5:00">5:00 مساءً</option>
+                  <option value="7:00">7:00 مساءً</option>
+                  <option value="9:00">9:00 مساءً</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="booking-service" class="block text-gray-700 mb-1">نوع الخدمة</label>
+                <select id="booking-service" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                  <option value="">اختر الخدمة</option>
+                  <option value="day-pass">تذكرة يومية</option>
+                  <option value="birthday-party">حفلة عيد ميلاد</option>
+                  <option value="group-event">فعالية جماعية</option>
+                  <option value="cafe-reservation">حجز كوفي شوب</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition">تأكيد الحجز</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">تواصل معنا</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">نحن هنا للإجابة على جميع استفساراتك</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="fade-in">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+            <h3 class="text-2xl font-semibold mb-6">بيانات التواصل</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-orange-100 text-orange-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">العنوان</h4>
+                  <p class="text-gray-600">حي الشاطئ الشرقي، شارع الملك فهد، الدمام</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-orange-100 text-orange-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">الهاتف</h4>
+                  <p class="text-gray-600">+966 13 123 4567</p>
+                  <p class="text-gray-600">+966 50 123 4567</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-orange-100 text-orange-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">البريد الإلكتروني</h4>
+                  <p class="text-gray-600">info@kidzo.com</p>
+                  <p class="text-gray-600">booking@kidzo.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-orange-100 text-orange-600 p-3 rounded-full mr-4">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">أوقات العمل</h4>
+                  <p class="text-gray-600">يوميًا من 9:00 صباحًا إلى 11:00 مساءً</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fade-in" style="animation-delay: 0.2s">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-semibold mb-6">أرسل استفسارك</h3>
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label for="contact-name" class="block text-gray-700 mb-1">الاسم</label>
+                <input type="text" id="contact-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              </div>
+              <div>
+                <label for="contact-email" class="block text-gray-700 mb-1">البريد الإلكتروني</label>
+                <input type="email" id="contact-email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              </div>
+              <div>
+                <label for="contact-message" class="block text-gray-700 mb-1">رسالتك</label>
+                <textarea id="contact-message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition">إرسال الرسالة</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right">
+        <div>
+          <h4 class="text-lg font-semibold mb-4">كيدزو</h4>
+          <p class="text-orange-100">مركز ترفيهي متكامل للأطفال يقدم أنشطة تعليمية وترفيهية، قاعة احتفالات، وكوفي شوب عائلي.</p>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+          <ul class="space-y-2">
+            <li><a href="#activities" class="text-orange-100 hover:text-white transition">الألعاب والأنشطة</a></li>
+            <li><a href="#cafe" class="text-orange-100 hover:text-white transition">الكوفي شوب</a></li>
+            <li><a href="#events" class="text-orange-100 hover:text-white transition">قاعة الاحتفالات</a></li>
+            <li><a href="#booking" class="text-orange-100 hover:text-white transition">احجز الآن</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">تواصلوا معنا</h4>
+          <div class="flex justify-center md:justify-end space-x-4 mb-4">
+            <a href="#" class="text-orange-100 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-orange-100 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-orange-100 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="text-orange-100 hover:text-white transition"><i class="fab fa-whatsapp text-xl"></i></a>
+          </div>
+          <p class="text-orange-100">اشترك في النشرة الإخبارية:</p>
+          <form class="mt-2 flex justify-center md:justify-end">
+            <input type="email" placeholder="بريدك الإلكتروني" class="p-2 rounded-r-lg border-none focus:ring-2 focus:ring-orange-700">
+            <button type="submit" class="bg-orange-700 hover:bg-orange-800 text-white p-2 rounded-l-lg transition"><i class="fas fa-envelope"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-orange-500 mt-8 pt-4 text-center">
+        <p class="text-orange-100">جميع الحقوق محفوظة © كيدزو 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Scroll animation for navbar
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+          nav.classList.add('shadow-lg');
+          nav.classList.remove('shadow-md');
+        } else {
+          nav.classList.add('shadow-md');
+          nav.classList.remove('shadow-lg');
+        }
+      });
+
+      // Intersection Observer for animations
+      const animateElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeIn');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animateElements.forEach(el => observer.observe(el));
+
+      // Review form rating stars interactivity
+      const stars = document.querySelectorAll('#review-rating i');
+      stars.forEach(star => {
+        star.addEventListener('click', () => {
+          const rating = star.getAttribute('data-rating');
+          stars.forEach(s => {
+            if (s.getAttribute('data-rating') <= rating) {
+              s.classList.remove('far');
+              s.classList.add('fas', 'text-orange-600');
+            } else {
+              s.classList.remove('fas', 'text-orange-600');
+              s.classList.add('far', 'text-gray-400');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
