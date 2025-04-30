@@ -47,6 +47,62 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
+    /* Slider Styles */
+    .slider-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slider img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .slider-prev, .slider-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .slider-prev:hover, .slider-next:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    .slider-prev {
+      right: 10px;
+    }
+    .slider-next {
+      left: 10px;
+    }
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .slider-dot.active {
+      background: #f97316;
+    }
   </style>
 </head>
 <body class="bg-gray-100">
@@ -68,7 +124,8 @@
       <ul class="hidden md:flex space-x-8 lg:space-x-10 items-center">
         <li><a href="#activities" class="nav-link hover:text-orange-200 px-2 py-1">الألعاب والأنشطة</a></li>
         <li><a href="#cafe" class="nav-link hover:text-orange-200 px-2 py-1">الكوفي شوب</a></li>
-        <li><a href="#events" class="nav-link hover:text-orange-200 px-2 py-1">قاعة الاحتفالات</a></li>
+        <li><a href="#events" class="nav-link hover:text-text-orange-200 px-2 py-1">قاعة الاحتفالات</a></li>
+        <li><a href="#gallery" class="nav-link hover:text-orange-200 px-2 py-1">معرض الصور</a></li>
         <li><a href="#reviews" class="nav-link hover:text-orange-200 px-2 py-1">آراء العملاء</a></li>
         <li><a href="#contact" class="nav-link hover:text-orange-200 px-2 py-1">تواصل معنا</a></li>
         <li><a href="#booking" class="bg-white text-orange-600 px-4 py-2 rounded-lg hover:bg-orange-100 transition font-medium">احجز الآن</a></li>
@@ -80,6 +137,7 @@
       <a href="#activities" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-gamepad ml-2"></i> الألعاب والأنشطة</a>
       <a href="#cafe" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-coffee ml-2"></i> الكوفي شوب</a>
       <a href="#events" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-birthday-cake ml-2"></i> قاعة الاحتفالات</a>
+      <a href="#gallery" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-images ml-2"></i> معرض الصور</a>
       <a href="#reviews" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-star ml-2"></i> آراء العملاء</a>
       <a href="#contact" class="block px-4 py-2 hover:bg-orange-600 transition flex items-center"><i class="fas fa-phone ml-2"></i> تواصل معنا</a>
       <a href="#booking" class="block px-4 py-2 bg-orange-800 hover:bg-orange-900 transition font-medium flex items-center"><i class="fas fa-calendar-check ml-2"></i> احجز الآن</a>
@@ -177,7 +235,7 @@
         </div>
         <div class="fade-in" style="animation-delay: 0.2s">
           <h3 class="text-2xl font-semibold mb-4">تجربة فريدة للعائلة</h3>
-          <p class="text-gray-600 mb-4">كوفي شوب كيدزو يوفر بيئة مريحة للأهالي أثناء استمتاع أطفالهم بالأنشطة، مع قائمة طعام صحية ولذيذة.</p>
+          <p class="text-gray-600 mb-4">كوفي شوب كيدزو يوفر بيئة مريحة للأهالي أثناء استمتbyع أطفالهم بالأنشطة، مع قائمة طعام صحية ولذيذة.</p>
           <ul class="space-y-2 mb-6">
             <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> قهوة عالية الجودة من أفضل المحاصيل</li>
             <li class="flex items-center"><i class="fas fa-check text-orange-600 mr-2"></i> عصائر طازجة وفواكه موسمية</li>
@@ -281,6 +339,65 @@
           </div>
           
           <a href="#booking" class="bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-lg text-lg font-medium inline-block transition transform hover:scale-105">احجز قاعتك الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section (Slider) -->
+  <section id="gallery" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">معرض الصور</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">استمتع بجولة مرئية في كيدزو من خلال مجموعتنا المميزة من الصور</p>
+      </div>
+      
+      <div class="slider-container fade-in">
+        <div class="slider">
+          <img src="images/gallery1.jpg" alt="نشاط ترفيهي 1" loading="lazy">
+          <img src="images/gallery2.jpg" alt="نشاط ترفيهي 2" loading="lazy">
+          <img src="images/gallery3.jpg" alt="نشاط ترفيهي 3" loading="lazy">
+          <img src="images/gallery4.jpg" alt="نشاط ترفيهي 4" loading="lazy">
+          <img src="images/gallery5.jpg" alt="نشاط ترفيهي 5" loading="lazy">
+          <img src="images/gallery6.jpg" alt="حفلة 1" loading="lazy">
+          <img src="images/gallery7.jpg" alt="حفلة 2" loading="lazy">
+          <img src="images/gallery8.jpg" alt="حفلة 3" loading="lazy">
+          <img src="images/gallery9.jpg" alt="كوفي شوب 1" loading="lazy">
+          <img src="images/gallery10.jpg" alt="كوفي شوب 2" loading="lazy">
+          <img src="images/gallery11.jpg" alt="نشاط فني 1" loading="lazy">
+          <img src="images/gallery12.jpg" alt="نشاط فني 2" loading="lazy">
+          <img src="images/gallery13.jpg" alt="نشاط ترفيهي 6" loading="lazy">
+          <img src="images/gallery14.jpg" alt="حفلة 4" loading="lazy">
+          <img src="images/gallery15.jpg" alt="كوفي شوب 3" loading="lazy">
+          <img src="images/gallery16.jpg" alt="نشاط ترفيهي 7" loading="lazy">
+          <img src="images/gallery17.jpg" alt="نشاط فني 3" loading="lazy">
+          <img src="images/gallery18.jpg" alt="حفلة 5" loading="lazy">
+          <img src="images/gallery19.jpg" alt="كوفي شوب 4" loading="lazy">
+          <img src="images/gallery20.jpg" alt="نشاط ترفيهي 8" loading="lazy">
+        </div>
+        <span class="slider-prev"><i class="fas fa-chevron-right"></i></span>
+        <span class="slider-next"><i class="fas fa-chevron-left"></i></span>
+        <div class="slider-dots">
+          <span class="slider-dot active" data-index="0"></span>
+          <span class="slider-dot" data-index="1"></span>
+          <span class="slider-dot" data-index="2"></span>
+          <span class="slider-dot" data-index="3"></span>
+          <span class="slider-dot" data-index="4"></span>
+          <span class="slider-dot" data-index="5"></span>
+          <span class="slider-dot" data-index="6"></span>
+          <span class="slider-dot" data-index="7"></span>
+          <span class="slider-dot" data-index="8"></span>
+          <span class="slider-dot" data-index="9"></span>
+          <span class="slider-dot" data-index="10"></span>
+          <span class="slider-dot" data-index="11"></span>
+          <span class="slider-dot" data-index="12"></span>
+          <span class="slider-dot" data-index="13"></span>
+          <span class="slider-dot" data-index="14"></span>
+          <span class="slider-dot" data-index="15"></span>
+          <span class="slider-dot" data-index="16"></span>
+          <span class="slider-dot" data-index="17"></span>
+          <span class="slider-dot" data-index="18"></span>
+          <span class="slider-dot" data-index="19"></span>
         </div>
       </div>
     </div>
@@ -447,7 +564,7 @@
                   <option value="11:00">11:00 صباحًا</option>
                   <option value="1:00">1:00 ظهرًا</option>
                   <option value="3:00">3:00 عصرًا</option>
-                  <option value="5:00">5:00 مساءً</option>
+                  <option value="3:00">5:00 مساءً</option>
                   <option value="7:00">7:00 مساءً</option>
                   <option value="9:00">9:00 مساءً</option>
                 </select>
@@ -470,7 +587,7 @@
         </div>
       </div>
     </div>
-  </section->$  
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 bg-white">
@@ -513,8 +630,8 @@
                 </div>
                 <div>
                   <h4 class="font-medium text-lg mb-1">البريد الإلكتروني</h4>
-                  <p class="text-gray-600">info@kidzo.com</p>
-                  <p class="text-gray-600">booking@kidzo.com</p>
+                  <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e474048416e45474a5441004d4143">[email&#160;protected]</a></p>
+                  <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b2924242022252c0b20222f312465282426">[email&#160;protected]</a></p>
                 </div>
               </div>
               
@@ -571,6 +688,7 @@
             <li><a href="#activities" class="text-orange-100 hover:text-white transition">الألعاب والأنشطة</a></li>
             <li><a href="#cafe" class="text-orange-100 hover:text-white transition">الكوفي شوب</a></li>
             <li><a href="#events" class="text-orange-100 hover:text-white transition">قاعة الاحتفالات</a></li>
+            <li><a href="#gallery" class="text-orange-100 hover:text-white transition">معرض الصور</a></li>
             <li><a href="#booking" class="text-orange-100 hover:text-white transition">احجز الآن</a></li>
           </ul>
         </div>
@@ -597,6 +715,7 @@
     </div>
   </footer>
 
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Smooth scrolling
@@ -649,7 +768,7 @@
       stars.forEach(star => {
         star.addEventListener('click', () => {
           const rating = star.getAttribute('data-rating');
-          ratingInput.value = rating; // Update hidden input with rating
+          ratingInput.value = rating;
           stars.forEach(s => {
             s.setAttribute('aria-checked', s.getAttribute('data-rating') <= rating);
             s.querySelector('i').classList.toggle('fas', s.getAttribute('data-rating') <= rating);
@@ -664,6 +783,51 @@
           }
         });
       });
+
+      // Slider functionality
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slider img');
+      const prevButton = document.querySelector('.slider-prev');
+      const nextButton = document.querySelector('.slider-next');
+      const dots = document.querySelectorAll('.slider-dot');
+      let currentIndex = 0;
+
+      function updateSlider() {
+        slider.style.transform = `translateX(${currentIndex * -100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+      }
+
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      });
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          currentIndex = parseInt(dot.getAttribute('data-index'));
+          updateSlider();
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          prevButton.click();
+        } else if (e.key === 'ArrowLeft') {
+          nextButton.click();
+        }
+      });
+
+      // Auto-slide (optional, can be removed if not needed)
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      }, 5000);
     });
   </script>
 </body>
