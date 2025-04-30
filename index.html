@@ -58,8 +58,8 @@
       </a>
       
       <!-- Mobile menu button -->
-      <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="قائمة التنقل">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="فتح أو إغلاق قائمة التنقل" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
@@ -110,48 +110,48 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in">
           <div class="overflow-hidden rounded-md mb-4">
-            <img src="images/climbing.jpg" alt="جدار التسلق" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+            <img src="images/climbing.jpg" alt="جدار التسلق" loading="lazy" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
           </div>
           <h3 class="text-xl font-semibold mb-2">جدار التسلق</h3>
           <p class="text-gray-600 mb-4">تجربة تسلق آمنة وممتعة مع معدات حديثة وإشراف متخصص</p>
-          <div class="flex items-center text-orange-600">
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star-half-alt mr-2"></i>
+          <div class="flex items-center text-orange-600" aria-label="تقييم 4.7 من 5">
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star-half-alt mr-2" aria-hidden="true"></i>
             <span class="text-gray-500 text-sm">(4.7)</span>
           </div>
         </div>
         
         <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in" style="animation-delay: 0.2s">
           <div class="overflow-hidden rounded-md mb-4">
-            <img src="images/trampoline.jpg" alt="الترامبولين" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+            <img src="images/trampoline.jpg" alt="الترامبولين" loading="lazy" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
           </div>
           <h3 class="text-xl font-semibold mb-2">منطقة الترامبولين</h3>
           <p class="text-gray-600 mb-4">مساحة واسعة للقفز والمرح مع إجراءات أمان مشددة</p>
-          <div class="flex items-center text-orange-600">
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-2"></i>
+          <div class="flex items-center text-orange-600" aria-label="تقييم 4.9 من 5">
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-2" aria-hidden="true"></i>
             <span class="text-gray-500 text-sm">(4.9)</span>
           </div>
         </div>
         
         <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 activity-card fade-in" style="animation-delay: 0.4s">
           <div class="overflow-hidden rounded-md mb-4">
-            <img src="images/arts.jpg" alt="الرسم والإبداع" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+            <img src="images/arts.jpg" alt="الرسم والإبداع" loading="lazy" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
           </div>
           <h3 class="text-xl font-semibold mb-2">ورشة الرسم والإبداع</h3>
           <p class="text-gray-600 mb-4">أنشطة فنية لتنمية المواهب تحت إشراف فنانين متخصصين</p>
-          <div class="flex items-center text-orange-600">
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-1"></i>
-            <i class="fas fa-star mr-2"></i>
+          <div class="flex items-center text-orange-600" aria-label="تقييم 4.8 من 5">
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-1" aria-hidden="true"></i>
+            <i class="fas fa-star mr-2" aria-hidden="true"></i>
             <span class="text-gray-500 text-sm">(4.8)</span>
           </div>
         </div>
@@ -173,7 +173,7 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <div class="fade-in">
-          <img src="images/cafe-area.jpg" alt="منطقة الكوفي شوب" class="w-full rounded-lg shadow-lg">
+          <img src="images/cafe-area.jpg" alt="منطقة الكوفي شوب" loading="lazy" class="w-full rounded-lg shadow-lg">
         </div>
         <div class="fade-in" style="animation-delay: 0.2s">
           <h3 class="text-2xl font-semibold mb-4">تجربة فريدة للعائلة</h3>
@@ -227,10 +227,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
         <div class="fade-in">
           <div class="grid grid-cols-2 gap-4">
-            <img src="images/event1.jpg" alt="حفلة عيد ميلاد" class="rounded-lg shadow-md w-full h-48 object-cover">
-            <img src="images/event2.jpg" alt="ديكور الحفلات" class="rounded-lg shadow-md w-full h-48 object-cover">
-            <img src="images/event3.jpg" alt="أنشطة الحفلات" class="rounded-lg shadow-md w-full h-48 object-cover">
-            <img src="images/event4.jpg" alt="ضيوف الحفلة" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event1.jpg" alt="حفلة عيد ميلاد" loading="lazy" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event2.jpg" alt="ديكور الحفلات" loading="lazy" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event3.jpg" alt="أنشطة الحفلات" loading="lazy" class="rounded-lg shadow-md w-full h-48 object-cover">
+            <img src="images/event4.jpg" alt="ضيوف الحفلة" loading="lazy" class="rounded-lg shadow-md w-full h-48 object-cover">
           </div>
         </div>
         
@@ -297,7 +297,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div class="bg-white p-6 rounded-lg shadow-md fade-in">
           <div class="flex items-center mb-4">
-            <img src="images/client1.jpg" alt="أم أحمد" class="w-12 h-12 rounded-full object-cover mr-3">
+            <img src="images/client1.jpg" alt="أم أحمد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
             <div>
               <h4 class="font-semibold">أم أحمد</h4>
               <div class="flex text-orange-600 text-sm">
@@ -314,7 +314,7 @@
         
         <div class="bg-white p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.2s">
           <div class="flex items-center mb-4">
-            <img src="images/client2.jpg" alt="وليد" class="w-12 h-12 rounded-full object-cover mr-3">
+            <img src="images/client2.jpg" alt="وليد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
             <div>
               <h4 class="font-semibold">وليد</h4>
               <div class="flex text-orange-600 text-sm">
@@ -331,7 +331,7 @@
         
         <div class="bg-white p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.4s">
           <div class="flex items-center mb-4">
-            <img src="images/client3.jpg" alt="سارة" class="w-12 h-12 rounded-full object-cover mr-3">
+            <img src="images/client3.jpg" alt="سارة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
             <div>
               <h4 class="font-semibold">سارة</h4>
               <div class="flex text-orange-600 text-sm">
@@ -349,24 +349,26 @@
       
       <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md fade-in" style="animation-delay: 0.6s">
         <h3 class="text-xl font-semibold mb-4 text-center">شاركنا رأيك</h3>
-        <form id="review-form" class="space-y-4">
+        <form id="review-form" name="review" data-netlify="true" action="/success.html" class="space-y-4">
+          <input type="hidden" name="form-name" value="review">
           <div>
             <label for="review-name" class="block text-gray-700 mb-1">اسمك</label>
-            <input type="text" id="review-name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+            <input type="text" id="review-name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
           </div>
           <div>
             <label for="review-rating" class="block text-gray-700 mb-1">التقييم</label>
-            <div class="flex space-x-1" id="review-rating">
-              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="1"></i>
-              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="2"></i>
-              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="3"></i>
-              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="4"></i>
-              <i class="far fa-star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="5"></i>
+            <input type="hidden" id="review-rating-value" name="rating">
+            <div class="flex space-x-1" id="review-rating" role="radiogroup" aria-label="اختر تقييمك">
+              <button type="button" role="radio" aria-checked="false" class="star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="1"><i class="far fa-star"></i></button>
+              <button type="button" role="radio" aria-checked="false" class="star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="2"><i class="far fa-star"></i></button>
+              <button type="button" role="radio" aria-checked="false" class="star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="3"><i class="far fa-star"></i></button>
+              <button type="button" role="radio" aria-checked="false" class="star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="4"><i class="far fa-star"></i></button>
+              <button type="button" role="radio" aria-checked="false" class="star text-2xl text-gray-400 cursor-pointer hover:text-orange-600" data-rating="5"><i class="far fa-star"></i></button>
             </div>
           </div>
           <div>
             <label for="review-message" class="block text-gray-700 mb-1">رأيك</label>
-            <textarea id="review-message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
+            <textarea id="review-message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
           </div>
           <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition">إرسال الرأي</button>
         </form>
@@ -420,25 +422,26 @@
           </div>
           
           <div class="p-8">
-            <form id="booking-form" class="space-y-4">
+            <form id="booking-form" name="booking" data-netlify="true" action="/success.html" class="space-y-4">
+              <input type="hidden" name="form-name" value="booking">
               <div>
                 <label for="booking-name" class="block text-gray-700 mb-1">الاسم الكامل</label>
-                <input type="text" id="booking-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <input type="text" id="booking-name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               
               <div>
                 <label for="booking-phone" class="block text-gray-700 mb-1">رقم الهاتف</label>
-                <input type="tel" id="booking-phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <input type="tel" id="booking-phone" name="phone" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               
               <div>
                 <label for="booking-date" class="block text-gray-700 mb-1">تاريخ الحجز</label>
-                <input type="date" id="booking-date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <input type="date" id="booking-date" name="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               
               <div>
                 <label for="booking-time" class="block text-gray-700 mb-1">وقت الحجز</label>
-                <select id="booking-time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <select id="booking-time" name="time" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
                   <option value="">اختر الوقت</option>
                   <option value="9:00">9:00 صباحًا</option>
                   <option value="11:00">11:00 صباحًا</option>
@@ -452,7 +455,7 @@
               
               <div>
                 <label for="booking-service" class="block text-gray-700 mb-1">نوع الخدمة</label>
-                <select id="booking-service" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <select id="booking-service" name="service" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
                   <option value="">اختر الخدمة</option>
                   <option value="day-pass">تذكرة يومية</option>
                   <option value="birthday-party">حفلة عيد ميلاد</option>
@@ -467,7 +470,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section->$  
 
   <!-- Contact Section -->
   <section id="contact" class="py-16 bg-white">
@@ -531,18 +534,19 @@
         <div class="fade-in" style="animation-delay: 0.2s">
           <div class="bg-gray-50 p-8 rounded-lg shadow-md">
             <h3 class="text-2xl font-semibold mb-6">أرسل استفسارك</h3>
-            <form id="contact-form" class="space-y-4">
+            <form id="contact-form" name="contact" data-netlify="true" action="/success.html" class="space-y-4">
+              <input type="hidden" name="form-name" value="contact">
               <div>
                 <label for="contact-name" class="block text-gray-700 mb-1">الاسم</label>
-                <input type="text" id="contact-name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <input type="text" id="contact-name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               <div>
                 <label for="contact-email" class="block text-gray-700 mb-1">البريد الإلكتروني</label>
-                <input type="email" id="contact-email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+                <input type="email" id="contact-email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               <div>
                 <label for="contact-message" class="block text-gray-700 mb-1">رسالتك</label>
-                <textarea id="contact-message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
+                <textarea id="contact-message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
               </div>
               <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 px-4 rounded-lg font-medium transition">إرسال الرسالة</button>
             </form>
@@ -581,7 +585,7 @@
           </div>
           <p class="text-orange-100">اشترك في النشرة الإخبارية:</p>
           <form class="mt-2 flex justify-center md:justify-end">
-            <input type="email" placeholder="بريدك الإلكتروني" class="p-2 rounded-r-lg border-none focus:ring-2 focus:ring-orange-700">
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" class="p-2 rounded-r-lg border-none focus:ring-2 focus:ring-orange-700">
             <button type="submit" class="bg-orange-700 hover:bg-orange-800 text-white p-2 rounded-l-lg transition"><i class="fas fa-envelope"></i></button>
           </form>
         </div>
@@ -611,7 +615,8 @@
       const menuToggle = document.getElementById('menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
       menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        const isExpanded = mobileMenu.classList.toggle('hidden');
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
       });
 
       // Scroll animation for navbar
@@ -639,19 +644,24 @@
       animateElements.forEach(el => observer.observe(el));
 
       // Review form rating stars interactivity
-      const stars = document.querySelectorAll('#review-rating i');
+      const stars = document.querySelectorAll('#review-rating .star');
+      const ratingInput = document.getElementById('review-rating-value');
       stars.forEach(star => {
         star.addEventListener('click', () => {
           const rating = star.getAttribute('data-rating');
+          ratingInput.value = rating; // Update hidden input with rating
           stars.forEach(s => {
-            if (s.getAttribute('data-rating') <= rating) {
-              s.classList.remove('far');
-              s.classList.add('fas', 'text-orange-600');
-            } else {
-              s.classList.remove('fas', 'text-orange-600');
-              s.classList.add('far', 'text-gray-400');
-            }
+            s.setAttribute('aria-checked', s.getAttribute('data-rating') <= rating);
+            s.querySelector('i').classList.toggle('fas', s.getAttribute('data-rating') <= rating);
+            s.querySelector('i').classList.toggle('far', s.getAttribute('data-rating') > rating);
+            s.querySelector('i').classList.toggle('text-orange-600', s.getAttribute('data-rating') <= rating);
+            s.querySelector('i').classList.toggle('text-gray-400', s.getAttribute('data-rating') > rating);
           });
+        });
+        star.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            star.click();
+          }
         });
       });
     });
