@@ -58,12 +58,14 @@
     .slider {
       display: flex;
       transition: transform 0.5s ease;
+      width: 100%;
     }
     .slider img {
       width: 100%;
       height: 300px;
       object-fit: cover;
       flex-shrink: 0;
+      display: block;
     }
     .slider-prev, .slider-next {
       position: absolute;
@@ -166,8 +168,8 @@
   <section id="home" class="bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white relative" style="background-image: url('images/hero-bg.jpg');">
     <div class="hero-overlay absolute inset-0"></div>
     <div class="container mx-auto relative z-10 px-4 fade-in">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn" style="animation-delay: 0.2s">مرحبًا بكم في كيدزو!</h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.4s">مكان المرح والإبداع لأطفالكم، حيث الألعاب التفاعلية والأنشطة الممتعة!</p>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn" style="animation-delay: 0.2s">مرحبًا بكم في كيدزو</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.4s">مكان المرح والإبداع لأطفالكم، تمتع بوقت ممتع مع عائلتك </p>
       <div class="animate-fadeIn" style="animation-delay: 0.6s">
         <a href="#activities" class="bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-lg text-lg font-medium inline-block mr-4 transition transform hover:scale-105">استكشف الأنشطة</a>
         <a href="#booking" class="bg-white text-orange-600 py-3 px-8 rounded-lg text-lg font-medium inline-block transition transform hover:scale-105">احجز الآن</a>
@@ -188,9 +190,10 @@
           <div class="overflow-hidden rounded-md mb-4">
             <img src="images/climbing.jpg" alt="جدار التسلق" loading="lazy" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
           </div>
-          <h3 class="text-xl font-semibold mb-2">جدار التسلق</h3>
-          <p class="text-gray-600 mb-4">تجربة تسلق آمنة وممتعة مع معدات حديثة وإشراف متخصص</p>
+          <h3 class="text-xl font-semibold mb-2">الألعاب الحركية</h3>
+          <p class="text-gray-600 mb-4">تجربة ألعاب آمنة وممتعة مع معدات حديثة وإشراف متخصص</p>
           <div class="flex items-center text-orange-600" aria-label="تقييم 4.7 من 5">
+            <i class="fas fa-star互動交流區
             <i class="fas fa-star mr-1" aria-hidden="true"></i>
             <i class="fas fa-star mr-1" aria-hidden="true"></i>
             <i class="fas fa-star mr-1" aria-hidden="true"></i>
@@ -220,7 +223,7 @@
           <div class="overflow-hidden rounded-md mb-4">
             <img src="images/arts.jpg" alt="الرسم والإبداع" loading="lazy" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
           </div>
-          <h3 class="text-xl font-semibold mb-2">ورشة الرسم والإبداع</h3>
+          <h3 class="text-xl font-semibold mb-2"> الألعاب التفاعلية</h3>
           <p class="text-gray-600 mb-4">أنشطة فنية لتنمية المواهب تحت إشراف فنانين متخصصين</p>
           <div class="flex items-center text-orange-600" aria-label="تقييم 4.8 من 5">
             <i class="fas fa-star mr-1" aria-hidden="true"></i>
@@ -369,57 +372,103 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-4">معرض الصور</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">استمتع بجولة مرئية في كيدزو من خلال مجموعتنا المميزة من الصور</p>
       </div>
-      
-      <div class="slider-container fade-in">
-        <div class="slider">
-          <img src="images/gallery1.jpg" alt="نشاط ترفيهي 1" loading="lazy">
-          <img src="images/gallery2.jpg" alt="نشاط ترفيهي 2" loading="lazy">
-          <img src="images/gallery3.jpg" alt="نشاط ترفيهي 3" loading="lazy">
-          <img src="images/gallery4.jpg" alt="نشاط ترفيهي 4" loading="lazy">
-          <img src="images/gallery5.jpg" alt="نشاط ترفيهي 5" loading="lazy">
-          <img src="images/gallery6.jpg" alt="حفلة 1" loading="lazy">
-          <img src="images/gallery7.jpg" alt="حفلة 2" loading="lazy">
-          <img src="images/gallery8.jpg" alt="حفلة 3" loading="lazy">
-          <img src="images/gallery9.jpg" alt="كوفي شوب 1" loading="lazy">
-          <img src="images/gallery10.jpg" alt="كوفي شوب 2" loading="lazy">
-          <img src="images/gallery11.jpg" alt="نشاط فني 1" loading="lazy">
-          <img src="images/gallery12.jpg" alt="نشاط فني 2" loading="lazy">
-          <img src="images/gallery13.jpg" alt="نشاط ترفيهي 6" loading="lazy">
-          <img src="images/gallery14.jpg" alt="حفلة 4" loading="lazy">
-          <img src="images/gallery15.jpg" alt="كوفي شوب 3" loading="lazy">
-          <img src="images/gallery16.jpg" alt="نشاط ترفيهي 7" loading="lazy">
-          <img src="images/gallery17.jpg" alt="نشاط فني 3" loading="lazy">
-          <img src="images/gallery18.jpg" alt="حفلة 5" loading="lazy">
-          <img src="images/gallery19.jpg" alt="كوفي شوب 4" loading="lazy">
-          <img src="images/gallery20.jpg" alt="نشاط ترفيهي 8" loading="lazy">
-        </div>
-        <span class="slider-prev"><i class="fas fa-chevron-right"></i></span>
-        <span class="slider-next"><i class="fas fa-chevron-left"></i></span>
-        <div class="slider-dots">
-          <span class="slider-dot active" data-index="0"></span>
-          <span class="slider-dot" data-index="1"></span>
-          <span class="slider-dot" data-index="2"></span>
-          <span class="slider-dot" data-index="3"></span>
-          <span class="slider-dot" data-index="4"></span>
-          <span class="slider-dot" data-index="5"></span>
-          <span class="slider-dot" data-index="6"></span>
-          <span class="slider-dot" data-index="7"></span>
-          <span class="slider-dot" data-index="8"></span>
-          <span class="slider-dot" data-index="9"></span>
-          <span class="slider-dot" data-index="10"></span>
-          <span class="slider-dot" data-index="11"></span>
-          <span class="slider-dot" data-index="12"></span>
-          <span class="slider-dot" data-index="13"></span>
-          <span class="slider-dot" data-index="14"></span>
-          <span class="slider-dot" data-index="15"></span>
-          <span class="slider-dot" data-index="16"></span>
-          <span class="slider-dot" data-index="17"></span>
-          <span class="slider-dot" data-index="18"></span>
-          <span class="slider-dot" data-index="19"></span>
-        </div>
-      </div>
+      <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض الصور</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .swiper {
+      width: 80%;
+      max-width: 600px;
+      height: 400px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="images/gallery1.jpg" alt="صورة 1" /></div>
+      <div class="swiper-slide"><img src="images/gallery2.jpg" alt="صورة 2" /></div>
+      <div class="swiper-slide"><img src="images/gallery3.jpg" alt="صورة 3" /></div>
+      <div class="swiper-slide"><img src="images/gallery4.jpg" alt="صورة 4" /></div>
+      <div class="swiper-slide"><img src="images/gallery5.jpg" alt="صورة 5" /></div>
+      <div class="swiper-slide"><img src="images/gallery6.jpg" alt="صورة 6" /></div>
+      <div class="swiper-slide"><img src="images/gallery7.jpg" alt="صورة 7" /></div>
+      <div class="swiper-slide"><img src="images/gallery8.jpg" alt="صورة 8" /></div>
+      <div class="swiper-slide"><img src="images/gallery9.jpg" alt="صورة 9" /></div>
+      <div class="swiper-slide"><img src="images/gallery10.jpg" alt="صورة 10" /></div>
+      <div class="swiper-slide"><img src="images/gallery11.jpg" alt="صورة 11" /></div>
+      <div class="swiper-slide"><img src="images/gallery12.jpg" alt="صورة 12" /></div>
     </div>
-  </section>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+</html>
 
   <!-- Reviews Section -->
   <section id="reviews" class="py-16 bg-gray-50">
@@ -463,7 +512,7 @@
           <div class="reviews-list">
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client1.jpg" alt="أم أحمد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/female.png" alt="أم أحمد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">أم أحمد</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -480,7 +529,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client2.jpg" alt="وليد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/man.png" alt="وليد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">وليد</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -497,7 +546,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client3.jpg" alt="سارة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/female.png" alt="سارة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">سارة</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -514,7 +563,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client4.jpg" alt="خالد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/man.png" alt="خالد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">خالد</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -531,7 +580,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client5.jpg" alt="ليلى" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/female.png" alt="ليلى" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">ليلى</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -548,7 +597,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client6.jpg" alt="محمد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/man.png" alt="محPublisherمد" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">محمد</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -565,7 +614,7 @@
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client7.jpg" alt="نورة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/female.png" alt="نورة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">نورة</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -577,12 +626,12 @@
                   </div>
                 </div>
               </div>
-              <p class="text-gray-600 italic">"ورشة الإبداع الفني ساعدت ابني على تطوير مهاراته. المكان ملهم وممتع للأطفال."</p>
+              <p class="text-gray-600 italic">"الألعاب التفاعليه ساعدت ابني على تطوير مهاراته. المكان مرتب جدا وممتع للأطفال."</p>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-md mb-4">
               <div class="flex items-center mb-4">
-                <img src="images/client8.jpg" alt="فاطمة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
+                <img src="images/female.png" alt="فاطمة" loading="lazy" class="w-12 h-12 rounded-full object-cover mr-3">
                 <div>
                   <h4 class="font-semibold">فاطمة</h4>
                   <div class="flex text-orange-600 text-sm">
@@ -661,7 +710,9 @@
               </div>
               
               <div>
-                <label for="booking-date" class="block text-gray-700 mb-1">تاريخ الحجز</label>
+                <label for="booking-date" class了一口气
+
+="block text-gray-700 mb-1">تاريخ الحجز</label>
                 <input type="date" id="booking-date" name="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
               </div>
               
@@ -699,7 +750,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
+  <section id="contact" personally="py-16 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12 fade-in">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">تواصل معنا</h2>
@@ -712,7 +763,7 @@
             <h3 class="text-2xl font-semibold mb-6">بيانات التواصل</h3>
             
             <div class="space-y-6">
-              <div class="flex items-start">
+              <  <div class="flex items-start">
                 <div class="bg-orange-100 text-orange-600 p-3 rounded-full mr-4">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
@@ -739,8 +790,8 @@
                 </div>
                 <div>
                   <h4 class="font-medium text-lg mb-1">البريد الإلكتروني</h4>
-                  <p class="text-gray-600"><a href="mailto:info@kidzo.com">info@kidzo.com</a></p>
-                  <p class="text-gray-600"><a href="mailto:support@kidzo.com">support@kidzo.com</a></p>
+                  <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection#96fff8f0f9d6fdf3fee0f5b8f5f9fb">[email&#160;protected]</a></p>
+                  <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection#0a797f7a7a6578704a61636e706524696567">[email&#160;protected]</a></p>
                 </div>
               </div>
               
@@ -824,6 +875,7 @@
     </div>
   </footer>
 
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Smooth scrolling
@@ -905,25 +957,39 @@
       const slides = document.querySelectorAll('.slider img');
       const prevButton = document.querySelector('.slider-prev');
       const nextButton = document.querySelector('.slider-next');
-      const dots = document.querySelectorAll('.slider-dot');
+      const dotsContainer = document.querySelector('.slider-dots');
       let currentIndex = 0;
 
+      // إنشاء النقاط ديناميكيًا
+      slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('slider-dot');
+        dot.setAttribute('data-index', index);
+        if (index === 0) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+      });
+      const dots = document.querySelectorAll('.slider-dot');
+
+      // تحديث السلايدر
       function updateSlider() {
         slider.style.transform = `translateX(${currentIndex * -100}%)`;
         dots.forEach(dot => dot.classList.remove('active'));
         dots[currentIndex].classList.add('active');
       }
 
+      // التنقل إلى السابق
       prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         updateSlider();
       });
 
+      // التنقل إلى التالي
       nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlider();
       });
 
+      // النقر على النقاط
       dots.forEach(dot => {
         dot.addEventListener('click', () => {
           currentIndex = parseInt(dot.getAttribute('data-index'));
@@ -931,6 +997,7 @@
         });
       });
 
+      // التنقل باستخدام الأسهم
       document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') {
           prevButton.click();
@@ -939,12 +1006,13 @@
         }
       });
 
-      // Auto-slide
+      // التنقل التلقائي
       setInterval(() => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateSlider();
       }, 5000);
     });
   </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'938dc819db94b06a',t:'MTc0NjA4NjgwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
